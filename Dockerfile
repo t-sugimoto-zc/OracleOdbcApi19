@@ -27,8 +27,8 @@ RUN apt-get install -y gpg
 COPY instantclient-basic-linux.x64-19.26.0.0.0dbru.zip /opt/oracle/
 COPY instantclient-odbc-linux.x64-19.26.0.0.0dbru.zip /opt/oracle/
 RUN cd /opt/oracle
-RUN unzip /opt/oracle/instantclient-basic-linux.x64-19.26.0.0.0dbru.zip -d /opt/oracle
-RUN unzip /opt/oracle/instantclient-odbc-linux.x64-19.26.0.0.0dbru.zip -d /opt/oracle
+RUN unzip -o /opt/oracle/instantclient-basic-linux.x64-19.26.0.0.0dbru.zip -d /opt/oracle
+RUN unzip -o /opt/oracle/instantclient-odbc-linux.x64-19.26.0.0.0dbru.zip -d /opt/oracle
 RUN rm -f /opt/oracle/*.zip
 RUN ln -s /opt/oracle/instantclient_19_26 /opt/oracle/instantclient
 RUN ls -a /opt/oracle/instantclient
